@@ -1,3 +1,5 @@
+import Footer from "@/components/shared/Footer";
+import Navbar from "@/components/shared/Navbar";
 import { ReactNode } from "react";
 
 interface IProps {
@@ -5,5 +7,11 @@ interface IProps {
 }
 
 export default function PublicLayout({ children }: IProps) {
-  return <div>{children}</div>;
+  return (
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  );
 }
