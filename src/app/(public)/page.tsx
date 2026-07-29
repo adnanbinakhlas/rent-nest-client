@@ -1,25 +1,26 @@
-import CTASection from "@/components/home/CTASection";
-import FAQSection from "@/components/home/FAQSection";
-import FeaturedPropertiesSection from "@/components/home/FeaturedPropertiesSection";
-import HeroSection from "@/components/home/HeroSection";
-import HowItWorksSection from "@/components/home/HowItWorksSection";
-import StatsSection from "@/components/home/StatsSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
+import BrowseByCategory from "@/features/home/components/BrowseByCategory";
+import { FeaturedProperties } from "@/features/home/components/FeaturedProperties";
+import FinalCta from "@/features/home/components/FinalCta";
+import { HeroSection } from "@/features/home/components/HeroSection";
+import HowItWorks from "@/features/home/components/HowItWorks";
+import PopularAreas from "@/features/home/components/PopularAreas";
+import Testimonials from "@/features/home/components/Testimonials";
+import TrustStrip from "@/features/home/components/TrustStrip";
+import { WhyRentNest } from "@/features/home/components/WhyRentNest";
+import { mockAreas, mockProperties } from "@/features/home/data/mockData";
 
 export default function HomePage() {
   return (
-    <>
-      <main>
-        <HeroSection />
-        <StatsSection />
-        <FeaturedPropertiesSection />
-        <HowItWorksSection />
-        <WhyChooseUsSection />
-        <TestimonialsSection />
-        <FAQSection />
-        <CTASection />
-      </main>
-    </>
+    <main>
+      <HeroSection />
+      <TrustStrip />
+      <FeaturedProperties properties={mockProperties} />
+      <BrowseByCategory />
+      <PopularAreas areas={mockAreas} />
+      <HowItWorks />
+      <WhyRentNest />
+      <Testimonials />
+      <FinalCta />
+    </main>
   );
 }
