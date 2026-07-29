@@ -49,72 +49,94 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* Crisp, high-contrast light theme with subtle gold highlights */
+  --background: oklch(0.99 0.005 85);
+  --foreground: oklch(0.18 0.02 60);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.18 0.02 60);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --popover-foreground: oklch(0.18 0.02 60);
+
+  /* Deep Luxury Gold as Primary Accent */
+  --primary: oklch(0.48 0.12 72);
+  --primary-foreground: oklch(0.99 0.005 85);
+
+  /* Warm Sand / Champagne Secondary Elements */
+  --secondary: oklch(0.95 0.025 80);
+  --secondary-foreground: oklch(0.28 0.08 72);
+
+  --muted: oklch(0.96 0.015 80);
+  --muted-foreground: oklch(0.45 0.03 65);
+
+  --accent: oklch(0.93 0.035 78);
+  --accent-foreground: oklch(0.25 0.08 70);
+
+  --destructive: oklch(0.55 0.22 25);
+  --border: oklch(0.9 0.02 75);
+  --input: oklch(0.88 0.025 75);
+  --ring: oklch(0.55 0.14 72);
+
+  /* Charts tuned for Real Estate analytics */
+  --chart-1: oklch(0.55 0.14 72);
+  --chart-2: oklch(0.4 0.08 60);
+  --chart-3: oklch(0.68 0.12 78);
+  --chart-4: oklch(0.32 0.05 45);
+  --chart-5: oklch(0.8 0.09 82);
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Sidebar Theme - Premium Dark Oak/Obsidian Contrast */
+  --sidebar: oklch(0.18 0.02 60);
+  --sidebar-foreground: oklch(0.95 0.015 80);
+  --sidebar-primary: oklch(0.65 0.15 75);
+  --sidebar-primary-foreground: oklch(0.12 0.02 60);
+  --sidebar-accent: oklch(0.25 0.03 65);
+  --sidebar-accent-foreground: oklch(0.95 0.015 80);
+  --sidebar-border: oklch(0.28 0.03 65);
+  --sidebar-ring: oklch(0.65 0.15 75);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Rich Obsidian Dark Mode with Warm Gold Highlights */
+  --background: oklch(0.13 0.02 55);
+  --foreground: oklch(0.96 0.01 80);
+  --card: oklch(0.17 0.02 58);
+  --card-foreground: oklch(0.96 0.01 80);
+  --popover: oklch(0.17 0.02 58);
+  --popover-foreground: oklch(0.96 0.01 80);
+
+  /* Glowing Warm Gold Accent */
+  --primary: oklch(0.72 0.15 76);
+  --primary-foreground: oklch(0.12 0.02 55);
+
+  --secondary: oklch(0.23 0.03 60);
+  --secondary-foreground: oklch(0.92 0.03 78);
+
+  --muted: oklch(0.21 0.025 58);
+  --muted-foreground: oklch(0.7 0.03 72);
+
+  --accent: oklch(0.26 0.04 62);
+  --accent-foreground: oklch(0.95 0.02 80);
+
+  --destructive: oklch(0.62 0.22 25);
+  --border: oklch(0.26 0.03 62);
+  --input: oklch(0.28 0.03 65);
+  --ring: oklch(0.72 0.15 76);
+
+  --chart-1: oklch(0.72 0.15 76);
+  --chart-2: oklch(0.58 0.11 72);
+  --chart-3: oklch(0.42 0.08 65);
+  --chart-4: oklch(0.82 0.12 80);
+  --chart-5: oklch(0.32 0.05 50);
+
+  --sidebar: oklch(0.15 0.02 56);
+  --sidebar-foreground: oklch(0.96 0.01 80);
+  --sidebar-primary: oklch(0.72 0.15 76);
+  --sidebar-primary-foreground: oklch(0.12 0.02 55);
+  --sidebar-accent: oklch(0.23 0.03 60);
+  --sidebar-accent-foreground: oklch(0.96 0.01 80);
+  --sidebar-border: oklch(0.25 0.03 60);
+  --sidebar-ring: oklch(0.72 0.15 76);
 }
 
 @layer base {
@@ -124,7 +146,8 @@
   body {
     @apply bg-background text-foreground;
   }
-  button:not(:disabled), [role="button"]:not(:disabled) {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
     cursor: pointer;
   }
   html {
