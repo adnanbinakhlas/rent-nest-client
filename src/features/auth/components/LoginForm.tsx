@@ -18,8 +18,12 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { loginService } from "../services/loginService";
+import { toast } from "sonner";
+import { ErrorResponse } from "@/types/apiResponse";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
+  const router = useRouter();
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -31,11 +35,15 @@ export default function LoginForm() {
   const { isSubmitting } = form.formState;
 
   const onSubmit = async (values: LoginFormValues) => {
+    const loadingId = toast.loading("Logging in....");
     try {
-      console.log(values);
-      await loginService(values);
+      const result = await loginService(values);
+      toast.success(result.message || "Login success.", { id: loadingId });
+      router.push("/dashboard/profile");
     } catch (error) {
+      const err = error as ErrorResponse;
       console.error(error);
+      toast.error(err.message || "Login failed.", { id: loadingId });
     }
   };
 
