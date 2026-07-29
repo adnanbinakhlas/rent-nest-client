@@ -12,7 +12,6 @@ export default function RegisterPage() {
         </p>
       </div>
 
-      {/*<RegisterForm />*/}
       <RegisterForm />
 
       <div className="mt-6 text-center text-sm text-muted-foreground">
