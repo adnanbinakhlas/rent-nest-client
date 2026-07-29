@@ -25,6 +25,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { registerService } from "../services/registerService";
 
 export default function RegisterForm() {
   const form = useForm<RegisterFormValues>({
@@ -54,7 +55,9 @@ export default function RegisterForm() {
         formData.append("avatar", values.avatar);
       }
 
-      console.log(values);
+      await registerService(formData);
+
+      console.log("Form Values:", values);
     } catch (error) {
       console.error(error);
     }

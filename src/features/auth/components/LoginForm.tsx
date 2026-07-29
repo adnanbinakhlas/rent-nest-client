@@ -17,6 +17,7 @@ import {
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
+import { loginService } from "../services/loginService";
 
 export default function LoginForm() {
   const form = useForm<LoginFormValues>({
@@ -32,6 +33,7 @@ export default function LoginForm() {
   const onSubmit = async (values: LoginFormValues) => {
     try {
       console.log(values);
+      await loginService(values);
     } catch (error) {
       console.error(error);
     }
