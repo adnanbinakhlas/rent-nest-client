@@ -123,12 +123,12 @@ export function HeroSection() {
               style={{ zIndex: 10 + i }}
               className={`absolute w-64 rounded-2xl border border-border bg-card p-4 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:rotate-0 ${CARD_ROTATION[i]} ${CARD_POSITION[i]}`}
             >
-              <div className="mb-3 h-32 w-full overflow-hidden rounded-xl">
+              <div className="mb-3 h-32 w-full overflow-hidden rounded-xl relative">
                 <Image
                   src={listing.imageUrl}
                   alt={listing.title}
-                  width={256}
-                  height={128}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="h-full w-full object-cover"
                 />
               </div>

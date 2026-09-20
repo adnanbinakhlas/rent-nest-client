@@ -1,13 +1,12 @@
-import Image from "next/image";
+import { Property } from "@/types/property";
 import {
-  IconMapPin,
-  IconBed,
   IconBath,
+  IconBed,
+  IconMapPin,
   IconRuler2,
   IconShieldCheck,
 } from "@tabler/icons-react";
-import { Property } from "@/types/property";
-import { log } from "console";
+import Image from "next/image";
 
 interface PropertyCardProps {
   property: Property;
@@ -18,8 +17,6 @@ export function PropertyCard({ property }: PropertyCardProps) {
   const primaryImage =
     property.images?.find((img) => img.isPrimary)?.imageUrl ||
     property.images?.[0]?.imageUrl;
-
-  log("image", primaryImage);
 
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg">
@@ -36,6 +33,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
           <Image
             src={primaryImage}
             alt={property.title}
+            sizes="(max-width: 768px) 100vw, 33vw"
             fill
             className="object-cover"
           />

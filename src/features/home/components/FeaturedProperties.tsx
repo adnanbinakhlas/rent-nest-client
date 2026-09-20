@@ -2,7 +2,6 @@ import { PropertyCard } from "@/components/shared/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { env } from "@/config/env";
 import { Property } from "@/types/property";
-import { log } from "console";
 import Link from "next/link";
 
 export async function FeaturedProperties() {
@@ -14,7 +13,6 @@ export async function FeaturedProperties() {
   }
 
   const properties = propertiesResponse.data;
-  log("properties", properties);
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
