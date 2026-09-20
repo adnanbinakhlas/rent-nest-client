@@ -1,6 +1,8 @@
 // Dummy data shaped like the real Property/Area records so the props
 // can be swapped for Prisma query results without changing the types.
 
+import { Property } from "@/types/property";
+
 export const mockProperties = [
   {
     id: "p1",
@@ -101,4 +103,51 @@ export const mockAreas = [
   { name: "GEC Circle", city: "Chattogram", count: 430 },
   { name: "Zindabazar", city: "Sylhet", count: 210 },
   { name: "Shaheb Bazar", city: "Rajshahi", count: 150 },
+];
+
+export const defaultProperties: Property[] = [
+  {
+    id: "p1",
+    title: "Riverside 2BR Apartment",
+    area: "Bashundhara R/A",
+    city: "Dhaka",
+    price: "৳32,000",
+    beds: 2,
+    baths: 2,
+    size: "1,150 sqft",
+    verified: true,
+  },
+  {
+    id: "p2",
+    title: "Furnished Studio for Professionals",
+    area: "Banani",
+    city: "Dhaka",
+    price: "৳21,500",
+    beds: 1,
+    baths: 1,
+    size: "600 sqft",
+    verified: true,
+  },
+  {
+    id: "p3",
+    title: "Family House with Rooftop",
+    area: "GEC Circle",
+    city: "Chattogram",
+    price: "৳48,000",
+    beds: 4,
+    baths: 3,
+    size: "2,400 sqft",
+    verified: true,
+  },
+  {
+    id: "p4",
+    title: "Compact Bachelor Mess",
+    area: "Shahjalal Uposhohor",
+    city: "Sylhet",
+    price: "৳9,000",
+    beds: 1,
+    baths: 1,
+    size: "320 sqft",
+    verified: false,
+  },
 ];
