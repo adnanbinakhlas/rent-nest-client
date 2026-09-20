@@ -1,9 +1,5 @@
-import {
-  IconSearch,
-  IconMapPin,
-  IconShieldCheck,
-  IconHome,
-} from "@tabler/icons-react";
+import Image from "next/image";
+import { IconSearch, IconMapPin, IconShieldCheck } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -15,6 +11,7 @@ const heroListings = [
     area: "Gulshan 2, Dhaka",
     price: "৳45,000",
     tag: "Verified",
+    imageUrl: "https://picsum.photos/seed/lakeside/400/300",
   },
   {
     id: "2",
@@ -22,6 +19,7 @@ const heroListings = [
     area: "Dhanmondi, Dhaka",
     price: "৳14,500",
     tag: "New",
+    imageUrl: "https://picsum.photos/seed/studio/400/300",
   },
   {
     id: "3",
@@ -29,6 +27,7 @@ const heroListings = [
     area: "Bashundhara R/A, Dhaka",
     price: "৳62,000",
     tag: "Verified",
+    imageUrl: "https://picsum.photos/seed/garden/400/300",
   },
 ];
 
@@ -116,7 +115,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Signature element: a fanned stack of listing cards instead of a single hero image */}
+        {/* Signature element: fanned stack of listing cards with real images */}
         <div className="relative mx-auto h-105 w-full max-w-md lg:h-120">
           {heroListings.map((listing, i) => (
             <div
@@ -124,8 +123,14 @@ export function HeroSection() {
               style={{ zIndex: 10 + i }}
               className={`absolute w-64 rounded-2xl border border-border bg-card p-4 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:rotate-0 ${CARD_ROTATION[i]} ${CARD_POSITION[i]}`}
             >
-              <div className="mb-3 flex h-32 items-center justify-center rounded-xl bg-linear-to-br from-primary/15 via-accent to-secondary">
-                <IconHome className="h-8 w-8 text-primary/70" />
+              <div className="mb-3 h-32 w-full overflow-hidden rounded-xl">
+                <Image
+                  src={listing.imageUrl}
+                  alt={listing.title}
+                  width={256}
+                  height={128}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <span className="mb-1 inline-block rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary">
                 {listing.tag}

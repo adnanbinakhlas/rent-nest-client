@@ -7,14 +7,14 @@ import PopularAreas from "@/features/home/components/PopularAreas";
 import Testimonials from "@/features/home/components/Testimonials";
 import TrustStrip from "@/features/home/components/TrustStrip";
 import { WhyRentNest } from "@/features/home/components/WhyRentNest";
-import { mockAreas, mockProperties } from "@/features/home/data/mockData";
+import { mockAreas } from "@/features/home/data/mockData";
 
 export default function HomePage() {
   return (
     <main>
       <HeroSection />
       <TrustStrip />
-      <FeaturedProperties properties={mockProperties} />
+      <FeaturedProperties />
       <BrowseByCategory />
       <PopularAreas areas={mockAreas} />
       <HowItWorks />
