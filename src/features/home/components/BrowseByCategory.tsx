@@ -87,6 +87,7 @@ export default function BrowseByCategory() {
                   src={imageUrl}
                   alt={name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 {/* Overlay for readability */}
