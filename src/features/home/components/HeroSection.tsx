@@ -128,7 +128,7 @@ export function HeroSection() {
                   src={listing.imageUrl}
                   alt={listing.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -1,4 +1,4 @@
-import { PropertyCard } from "@/components/shared/PropertyCard";
+import PropertyCard from "@/components/shared/Property/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { env } from "@/config/env";
 import { Property } from "@/types/property";
